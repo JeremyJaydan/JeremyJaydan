@@ -1,0 +1,207 @@
+
+:root{
+  color-scheme: light dark;
+  --base: 240 10%;
+  --primary: 240 50%;
+}
+
+body{
+  background: light-dark(hsl(var(--base) 98%), hsl(var(--base) 10%));
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  
+  &::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: hsl(240, 50%, 50%);
+    z-index: 100;
+    mix-blend-mode: hue;
+    pointer-events: none;
+    animation: rotate-hue 10s linear infinite;
+  }
+  
+}
+
+@keyframes rotate-hue {
+  from { filter: hue-rotate(0deg); }
+  to { filter: hue-rotate(360deg); }
+}
+
+main{
+  
+  margin: 128px auto;
+  width: 100%;
+  max-width: 620px;
+  padding: 0 16px;
+  box-sizing: border-box;
+  
+  > header {
+    
+    h1{
+      margin: 0;
+      margin-bottom: 4px;
+    }
+    
+    .social-link{
+      padding: 2px;
+      text-decoration: none;
+      background: light-dark(black, white);
+      color: light-dark(white, black);
+
+      &:hover{
+        background: light-dark(hsl(var(--primary) 40%), hsl(var(--primary) 40%));
+        color: light-dark(white, hsl(var(--primary) 98%));
+      }
+            
+    }
+    
+    p{
+      color: light-dark(hsl(var(--base) 23%), hsl(var(--base) 88%));
+    }
+    
+    .contact-link{
+      
+      display: inline-flex;
+      text-decoration: none;
+      gap: 4px;
+      font-weight: 500;
+      padding: 8px;
+      padding-right: 12px;
+      background: light-dark(black, white);
+      color: light-dark(white, black);
+
+      &:hover{
+        background: light-dark(hsl(var(--primary) 40%), hsl(var(--primary) 40%));
+        color: light-dark(white, hsl(var(--primary) 98%));
+      }
+      
+      span, svg{
+        align-self: center;
+      }
+      
+    }
+    
+  }
+  
+  > section {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    
+    h2 {
+      margin: 0;
+      margin-top: 32px;
+    }
+    
+    .link {
+      padding: 16px;
+      display: flex;
+      text-decoration: none;
+      gap: 16px;
+      background: light-dark(hsl(var(--base) 99%), hsl(var(--base) 12%));
+      border: 1px solid light-dark(hsl(var(--base) 90%), hsl(var(--base) 20%));
+      
+      &:hover{
+        background: light-dark(white, hsl(var(--base) 15%));
+        border: 1px solid light-dark(hsl(var(--base) 90%), hsl(var(--base) 30%));
+      }
+      
+      img {
+        width: 32px;
+        height: 32px;
+        z-index: 101;
+      }
+      
+      .details{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        
+        .name{
+          color: light-dark(black, white);
+        }
+        
+        .description{
+          color: light-dark(hsl(var(--base) 40%), hsl(var(--base) 70%));
+        }
+        
+      }
+      
+      .icon {
+        
+        width: 16px;
+        height: 16px;
+        align-self: center;
+        color: light-dark(hsl(var(--base) 40%), hsl(var(--base) 60%));
+        flex: none;
+        
+        .link:hover & {
+          color: light-dark(black, white);
+        }
+        
+      }
+      
+    }
+  }
+  
+  
+  > footer{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    
+    h2{
+      margin-top: 32px;
+      margin-bottom: 0;
+    }
+    
+    .subject-input,
+    .body-textarea{
+      background: light-dark(hsl(var(--base) 99%), hsl(var(--base) 12%));
+      border: 1px solid light-dark(hsl(var(--base) 90%), hsl(var(--base) 20%));
+      &:focus{
+        background: light-dark(hsl(var(--base) 99%), hsl(var(--base) 9%));
+        border: 1px solid light-dark(hsl(var(--base) 80%), hsl(var(--base) 30%));
+      }
+    }
+    
+    .subject-input {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 300px;
+      font-size: 16px;
+      padding: 8px;
+    }
+    
+    .body-textarea {
+      font-size: 16px;
+      resize: none;
+      min-height: 100px;
+      box-sizing: border-box;
+      padding: 8px;
+    }
+    
+    .email-link {
+      margin-top: 1px;
+      text-decoration: none;
+      text-align: center;
+      padding: 12px;
+      background: light-dark(black, white);
+      color: light-dark(white, black);
+      font-weight: 500;
+
+      &:hover{
+        background: light-dark(hsl(var(--primary) 40%), hsl(var(--primary) 40%));
+        color: light-dark(white, hsl(var(--primary) 98%));
+      }
+      
+    }
+    
+  }
+  
+}
