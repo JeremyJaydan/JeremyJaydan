@@ -1,6 +1,6 @@
 const sections = [
   {
-    name: "I'm working on..",
+    name: "I'm building..",
     items: [
       "https://intrasti.com"
     ]
