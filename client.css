@@ -48,11 +48,13 @@ main{
     .social-link{
       padding: 2px;
       text-decoration: none;
-      background: light-dark(black, white);
-      color: light-dark(white, black);
+      background: hsl(var(--primary) 40%);
+      color: light-dark(white, hsl(var(--primary) 98%));
+      border: 1px solid hsl(var(--primary) 50%);
 
       &:hover{
-        background: light-dark(hsl(var(--primary) 40%), hsl(var(--primary) 40%));
+        border-color: hsl(var(--primary) 60%);
+        background: hsl(var(--primary) 50%);
         color: light-dark(white, hsl(var(--primary) 98%));
       }
             
@@ -70,11 +72,13 @@ main{
       font-weight: 500;
       padding: 8px;
       padding-right: 12px;
-      background: light-dark(black, white);
-      color: light-dark(white, black);
+      background: hsl(var(--primary) 40%);
+      color: light-dark(white, hsl(var(--primary) 98%));
+      border: 1px solid hsl(var(--primary) 50%);
 
       &:hover{
-        background: light-dark(hsl(var(--primary) 40%), hsl(var(--primary) 40%));
+        border-color: hsl(var(--primary) 60%);
+        background: hsl(var(--primary) 50%);
         color: light-dark(white, hsl(var(--primary) 98%));
       }
       
@@ -191,12 +195,14 @@ main{
       text-decoration: none;
       text-align: center;
       padding: 12px;
-      background: light-dark(black, white);
-      color: light-dark(white, black);
       font-weight: 500;
+      background: hsl(var(--primary) 40%);
+      color: light-dark(white, hsl(var(--primary) 98%));
+      border: 1px solid hsl(var(--primary) 50%);
 
       &:hover{
-        background: light-dark(hsl(var(--primary) 40%), hsl(var(--primary) 40%));
+        border-color: hsl(var(--primary) 60%);
+        background: hsl(var(--primary) 50%);
         color: light-dark(white, hsl(var(--primary) 98%));
       }
       
